@@ -9,234 +9,309 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar glass-effect">
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
         <div class="nav-brand">
             <i class="fas fa-pepper-hot"></i>
-            Spice Garden
+            <span>Spice Garden</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#menu" class="nav-link"><i class="fas fa-book-open"></i> Menu</a></li>
-            <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
-            <li><a href="#location" class="nav-link"><i class="fas fa-map-marker-alt"></i> Location</a></li>
-        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section id="home" class="welcome-banner parallax-bg">
-        <div class="banner-content">
-            <h1 class="elegant-title">Spice Garden</h1>
-            <p class="tagline">Experience the Rich Flavors of India</p>
-            <div class="banner-buttons">
-                <a href="#menu" class="btn primary-btn">View Menu</a>
-                <a href="#location" class="btn secondary-btn">Find Us</a>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">Experience</span>
+                    <span class="line">Authentic</span>
+                    <span class="line">Indian Cuisine</span>
+                </h1>
+                <p class="hero-subtitle">Where tradition meets innovation</p>
+                <div class="hero-cta">
+                    <a href="#menu" class="btn primary-btn">
+                        <i class="fas fa-utensils"></i>
+                        Explore Menu
+                    </a>
+                    <a href="#location" class="btn secondary-btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Visit Us
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="hero-image">
+                <img src="images/hero-banner.jpg" alt="Indian Cuisine">
+            </div>
+        </section>
 
-    <section id="menu" class="menu-section">
-        <h2 class="section-title">Our Menu</h2>
-        <div class="menu-tabs">
-            <button class="tab-btn active" data-category="starters">
-                <i class="fas fa-pepper-hot"></i> Starters
-            </button>
-            <button class="tab-btn" data-category="main">
-                <i class="fas fa-drumstick-bite"></i> Main Course
-            </button>
-            <button class="tab-btn" data-category="desserts">
-                <i class="fas fa-ice-cream"></i> Desserts
-            </button>
-        </div>
-        
-        <div class="menu-category active" id="starters">
-            <div class="menu-items">
-                <div class="menu-item card-hover">
-                    <img src="images/paneer-tikka.png" alt="Paneer Tikka" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Paneer Tikka</h4>
-                            <span class="price">₹299</span>
-                        </div>
-                        <p class="description">Cottage cheese marinated in spices and grilled to perfection</p>
-                        <span class="badge recommended"><i class="fas fa-star"></i> Chef's Special</span>
-                    </div>
-                </div>
-                <div class="menu-item card-hover">
-                    <img src="images/chicken-65.jpeg" alt="Chicken 65" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Chicken 65</h4>
-                            <span class="price">₹349</span>
-                        </div>
-                        <p class="description">Spicy deep-fried chicken with curry leaves and red chilies</p>
-                    </div>
-                </div>
-                <div class="menu-item card-hover">
-                    <img src="images/samosa.webp" alt="Samosa" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Samosa</h4>
-                            <span class="price">₹149</span>
-                        </div>
-                        <p class="description">Crispy pastry filled with spiced potatoes and peas</p>
-                    </div>
-                </div>
+        <section id="menu" class="menu-section">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Discover our carefully curated selection of authentic Indian dishes</p>
             </div>
-        </div>
+            
+            <div class="menu-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="starters">
+                        <i class="fas fa-pepper-hot"></i>
+                        <span>Starters</span>
+                    </button>
+                    <button class="tab-btn" data-category="main">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <span>Main Course</span>
+                    </button>
+                    <button class="tab-btn" data-category="desserts">
+                        <i class="fas fa-ice-cream"></i>
+                        <span>Desserts</span>
+                    </button>
+                </div>
 
-        <div class="menu-category" id="main">
-            <div class="menu-items">
-                <div class="menu-item card-hover">
-                    <img src="images/butter-chicken.jpg" alt="Butter Chicken" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Butter Chicken</h4>
-                            <span class="price">₹499</span>
+                <div class="menu-grid">
+                    <div class="menu-category active" id="starters">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/paneer-tikka.png" alt="Paneer Tikka">
+                                <div class="item-badge">Chef's Special</div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Paneer Tikka</h3>
+                                    <span class="price">₹299</span>
+                                </div>
+                                <p class="description">Cottage cheese marinated in spices and grilled to perfection</p>
+                            </div>
                         </div>
-                        <p class="description">Tender chicken in a rich tomato and butter gravy</p>
-                        <span class="badge popular"><i class="fas fa-fire"></i> Popular</span>
-                    </div>
-                </div>
-                <div class="menu-item card-hover">
-                    <img src="images/paneer-makhani.jpg" alt="Paneer Makhani" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Paneer Makhani</h4>
-                            <span class="price">₹399</span>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/chicken-65.jpeg" alt="Chicken 65">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Chicken 65</h3>
+                                    <span class="price">₹349</span>
+                                </div>
+                                <p class="description">Spicy deep-fried chicken with curry leaves and red chilies</p>
+                            </div>
                         </div>
-                        <p class="description">Cottage cheese in a creamy tomato and cashew gravy</p>
-                    </div>
-                </div>
-                <div class="menu-item card-hover">
-                    <img src="images/biryani.jpg" alt="Biryani" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Biryani</h4>
-                            <span class="price">₹449</span>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/samosa.webp" alt="Samosa">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Samosa</h3>
+                                    <span class="price">₹149</span>
+                                </div>
+                                <p class="description">Crispy pastry filled with spiced potatoes and peas</p>
+                            </div>
                         </div>
-                        <p class="description">Fragrant basmati rice cooked with spices and choice of meat</p>
-                        <span class="badge signature"><i class="fas fa-award"></i> Signature</span>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="menu-category" id="desserts">
-            <div class="menu-items">
-                <div class="menu-item card-hover">
-                    <img src="images/gulab-jamun.jpg" alt="Gulab Jamun" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Gulab Jamun</h4>
-                            <span class="price">₹199</span>
+                    <div class="menu-category" id="main">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/butter-chicken.jpg" alt="Butter Chicken">
+                                <div class="item-badge">Popular</div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Butter Chicken</h3>
+                                    <span class="price">₹499</span>
+                                </div>
+                                <p class="description">Tender chicken in a rich tomato and butter gravy</p>
+                            </div>
                         </div>
-                        <p class="description">Sweet milk solids dumplings in sugar syrup</p>
-                    </div>
-                </div>
-                <div class="menu-item card-hover">
-                    <img src="images/kheer.jpeg" alt="Kheer" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Kheer</h4>
-                            <span class="price">₹179</span>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/paneer-makhani.jpg" alt="Paneer Makhani">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Paneer Makhani</h3>
+                                    <span class="price">₹399</span>
+                                </div>
+                                <p class="description">Cottage cheese in a creamy tomato and cashew gravy</p>
+                            </div>
                         </div>
-                        <p class="description">Traditional rice pudding with nuts and saffron</p>
-                    </div>
-                </div>
-                <div class="menu-item card-hover">
-                    <img src="images/rasmalai.jpg" alt="Rasmalai" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="item-header">
-                            <h4>Rasmalai</h4>
-                            <span class="price">₹249</span>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/biryani.jpg" alt="Biryani">
+                                <div class="item-badge">Signature</div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Biryani</h3>
+                                    <span class="price">₹449</span>
+                                </div>
+                                <p class="description">Fragrant basmati rice cooked with spices and choice of meat</p>
+                            </div>
                         </div>
-                        <p class="description">Cottage cheese dumplings in sweetened milk</p>
-                        <span class="badge recommended"><i class="fas fa-star"></i> Chef's Choice</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="images/about-interior.jpg" alt="Indian Restaurant Interior">
-            </div>
-            <div class="about-content">
-                <h2 class="section-title">Our Story</h2>
-                <p class="story-text">Founded in 2010, Spice Garden brings the authentic flavors of India to Mumbai. Our chefs, trained in various regions of India, create dishes that capture the essence of traditional Indian cuisine while adding contemporary touches.</p>
-                <p class="story-text">We take pride in using the finest spices and ingredients, sourced directly from different regions of India, to create an unforgettable dining experience.</p>
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="fas fa-users"></i>
-                        <span class="stat-number">15K+</span>
-                        <span class="stat-label">Happy Customers</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-award"></i>
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Awards Won</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-clock"></i>
-                        <span class="stat-number">13</span>
-                        <span class="stat-label">Years of Excellence</span>
+                    <div class="menu-category" id="desserts">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Gulab Jamun</h3>
+                                    <span class="price">₹199</span>
+                                </div>
+                                <p class="description">Sweet milk solids dumplings in sugar syrup</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/kheer.jpeg" alt="Kheer">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Kheer</h3>
+                                    <span class="price">₹179</span>
+                                </div>
+                                <p class="description">Traditional rice pudding with nuts and saffron</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <img src="images/rasmalai.jpg" alt="Rasmalai">
+                                <div class="item-badge">Chef's Choice</div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-header">
+                                    <h3>Rasmalai</h3>
+                                    <span class="price">₹249</span>
+                                </div>
+                                <p class="description">Cottage cheese dumplings in sweetened milk</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="location" class="location-section">
-        <h2 class="section-title">Find Us</h2>
-        <div class="location-content">
-            <div class="address card-hover">
-                <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
-                <p><i class="fas fa-building"></i> 123 Colaba Causeway</p>
-                <p><i class="fas fa-map"></i> Colaba, Mumbai 400001</p>
-                <p><i class="fas fa-phone"></i> +91 22 1234 5678</p>
-                <p><i class="fas fa-envelope"></i> info@spicegarden.com</p>
-                <div class="social-links">
-                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <section id="about" class="about-section">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-header">
+                        <h2>Our Story</h2>
+                        <p>A journey of authentic flavors</p>
+                    </div>
+                    <div class="about-text">
+                        <p>Founded in 2010, Spice Garden brings the authentic flavors of India to Mumbai. Our chefs, trained in various regions of India, create dishes that capture the essence of traditional Indian cuisine while adding contemporary touches.</p>
+                        <p>We take pride in using the finest spices and ingredients, sourced directly from different regions of India, to create an unforgettable dining experience.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">15K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Awards Won</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">13</span>
+                            <span class="stat-label">Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-interior.jpg" alt="Restaurant Interior">
                 </div>
             </div>
-            <div class="map card-hover">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60320.65593189405!2d72.8179739!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c06fffffff%3A0xc0290485a4d80f97!2sColaba%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1709912345678!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    title="Restaurant Location">
-                </iframe>
+        </section>
+
+        <section id="location" class="location-section">
+            <div class="location-grid">
+                <div class="location-info">
+                    <div class="section-header">
+                        <h2>Find Us</h2>
+                        <p>Visit our restaurant</p>
+                    </div>
+                    <div class="address-card">
+                        <div class="address-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>123 Colaba Causeway</p>
+                                <p>Colaba, Mumbai 400001</p>
+                            </div>
+                        </div>
+                        <div class="address-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 22 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="address-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@spicegarden.com</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60320.65593189405!2d72.8179739!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c06fffffff%3A0xc0290485a4d80f97!2sColaba%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1709912345678!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Restaurant Location">
+                    </iframe>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Opening Hours</h4>
-                <p>Monday - Friday: 11:00 AM - 11:00 PM</p>
-                <p>Saturday - Sunday: 10:00 AM - 12:00 AM</p>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <div class="footer-brand">
+                    <i class="fas fa-pepper-hot"></i>
+                    <span>Spice Garden</span>
+                </div>
+                <p>Experience the rich flavors of India in the heart of Mumbai. Our authentic cuisine brings together traditional recipes and modern culinary techniques.</p>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#location">Location</a></li>
+                    <li><i class="far fa-clock"></i>Monday - Friday: 11:00 AM - 11:00 PM</li>
+                    <li><i class="far fa-clock"></i>Saturday - Sunday: 10:00 AM - 12:00 AM</li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Newsletter</h4>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Subscribe
+                    </button>
                 </form>
             </div>
         </div>
@@ -247,6 +322,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Menu tabs functionality
             const tabButtons = document.querySelectorAll('.tab-btn');
             const menuCategories = document.querySelectorAll('.menu-category');
 
@@ -261,25 +337,37 @@
                 });
             });
 
-            const navbar = document.querySelector('.navbar');
-            let lastScroll = 0;
+            // Custom cursor
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
 
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
                 
-                if (currentScroll <= 0) {
-                    navbar.classList.remove('scroll-up');
-                    return;
-                }
-                
-                if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
-                    navbar.classList.remove('scroll-up');
-                    navbar.classList.add('scroll-down');
-                } else if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
-                    navbar.classList.remove('scroll-down');
-                    navbar.classList.add('scroll-up');
-                }
-                lastScroll = currentScroll;
+                setTimeout(() => {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 100);
+            });
+
+            // Mobile menu toggle
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
             });
         });
     </script>
